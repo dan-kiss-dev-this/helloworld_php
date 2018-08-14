@@ -6,6 +6,8 @@
     $downtown_order = '302 cups';
     $northwest_order = '502 cups';
     $south_order = '1002 cups';
+    $salem_address = '123 st, salem or';
+    $salem_order = '402 cups';
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +25,9 @@
     <p><?php echo $northwest_address ?></p>
     <p><?php echo $south_order ?></p>
     <p><?php echo $south_address ?></p>
+    <p><?php echo $salem_order ?></p>
+    <p><?php echo $salem_address ?></p>
+    <p></p>
     <p>Thanks,</p>
     <p>Diane</p>
   </body>
