@@ -30,6 +30,7 @@
             foreach ($address_book as $name => $address ) {
               echo '<li>' . $name . ':' . $address . '</li>';
             }
+            var_dump($address_book);
           ?>
         </ul>
     </div>
