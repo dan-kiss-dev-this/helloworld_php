@@ -10,6 +10,9 @@ $dictionary = array('apple' => 'afruit commonly red or green', 'zebra' => 'an an
 echo $dictionary["zebra"];
 $cupcake_order = array('vanilla' => 12, 'chocolate' => 24, 'raspberry' => 6, 'caramel apple' => 36 );
 $dictionary['cat'] = 'a small furry animal goes meow';
+$cupcake_order = array("vanilla" => 12, "chocolate" => 24, "raspberry" => 6, "caramel apple" => 36);
+var_dump($cupcake_order);
+unset($cupcake_order['rasberry']);
 ?>
 
 <!DOCTYPE html>
