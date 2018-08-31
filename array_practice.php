@@ -1,8 +1,9 @@
 <?php
-    $groceries = array("eggs", "milk", "bread");
+    $groceries = array("eggs", "milk", "bread", "apples", "bananas", "fruit rollups", "steak", "kale", "pasta", "flour", "sugar", "vanilla");
     // var_dump($groceries);
     // array_push($groceries, 'apples', 'tomatoes');
     // var_dump($groceries);
+    $rainbow = array('red', 'orange', 'yellow', 'green', 'violet', 'blue');
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,14 @@
           }
         ?>
         <p><?php echo $purchase ?></p>
+      </ul>
+      <h1>Colors in rainbows</h1>
+      <ul>
+        <?php
+          foreach ($rainbow as $single_color) {
+            echo "<li>" . $single_color . "</li>";
+          }
+        ?>
       </ul>
   </body>
 </html>
