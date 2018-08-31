@@ -3,8 +3,14 @@
     $response = checkAge($user_age);
     function checkAge($user_age_test)
     {
-        if ($user_age_test >= 21) {
+        if ($user_age_test >= 22 || $user_age_test == 'look at my id') {
             return "you can drink";
+        }
+        elseif ($user_age_test == 21 && $user_age_test/2 == 10.5) {
+          return 'you just turned 21 ok then welcome';
+        }
+        else {
+          return 'you cant drink';
         }
     }
 ?>
