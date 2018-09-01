@@ -28,7 +28,7 @@
         <ul>
           <?php
             foreach ($address_book as $name => $address ) {
-              if ($name != '') {
+              if ($name) {
                 echo '<li>' . $name . ':' . $address . '</li>';
               }
             }
