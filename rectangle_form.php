@@ -6,7 +6,7 @@
 
       function isSquare()
       {
-        // echo 'line 9' . $this;
+        var_dump($this);
           if($this->length == $this->width) {
             return true;
           } else {
@@ -14,8 +14,14 @@
           }
       }
 
+      function getArea()
+      {
+        echo $this->$length;
+          return $this->length * $this->width;
+      }
+
   }
-  
+
   $my_rectangle = new Rectangle();
   $my_rectangle->length = $_GET["length"];
   $my_rectangle->width = $_GET["width"];
@@ -30,6 +36,7 @@
   <body>
     <div class="container">
       <?php
+      echo "<p>The area is " . $my_rectangle->getArea() . "</p>";
             if ($my_rectangle->isSquare()){
               echo "<h1>Congratulations! You made a square!</h1>";
             } else {
