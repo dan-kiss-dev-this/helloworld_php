@@ -12,27 +12,33 @@ class Car
     {
         return $this->price < $max_price1;
     }
+
+    function __construct($car_type, $cost, $miles_gone) {
+        $this->make_model = $car_type;
+        $this->price = $cost;
+        $this->miles = $miles_gone;
+    }
 }
 
-$porsche = new Car();
-$porsche->make_model = '2014 Porshe 911';
-$porsche->price = 114000;
-$porsche->miles = 7888;
+$porsche = new Car('2014 Porshe 911', 114000, 7888);
+// $porsche->make_model = '2014 Porshe 911';
+// $porsche->price = 114000;
+// $porsche->miles = 7888;
 
-$ford = new Car();
-$ford->make_model = "2011 Ford F450";
-$ford->price = 55995;
-$ford->miles = 14241;
+$ford = new Car("2011 Ford F450",55996,14241);
+// $ford->make_model = "2011 Ford F450";
+// $ford->price = 55995;
+// $ford->miles = 14241;
 
-$lexus = new Car();
-$lexus->make_model = "2013 Lexus RX 350";
-$lexus->price = 44700;
-$lexus->miles = 20000;
+$lexus = new Car("2013 Lexus RX 350", 44700, 20000);
+// $lexus->make_model = "2013 Lexus RX 350";
+// $lexus->price = 44700;
+// $lexus->miles = 20000;
 
-$mercedes = new Car();
-$mercedes->make_model = "Mercedes Benz CLS550";
-$mercedes->price = 39900;
-$mercedes->miles = 37979;
+$mercedes = new Car("Mercedes Benz CLS550", 39900, 37979);
+// $mercedes->make_model = "Mercedes Benz CLS550";
+// $mercedes->price = 39900;
+// $mercedes->miles = 37979;
 
 $cars = array($porsche, $ford, $lexus, $mercedes);
 $max_price = $_GET['price'];
