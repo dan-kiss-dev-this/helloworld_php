@@ -6,11 +6,23 @@ class Car
 {
     public $make_model;
     public $price;
-    public $miles;
+    private $miles;
 
     function worthBuying($max_price1)
     {
         return $this->price < $max_price1;
+    }
+
+    function getMiles()
+    {
+        return $this->miles;
+    }
+
+    function setMiles($miles_to_use)
+    {
+        if ($this->make_model == 'Mercedes Benz CLS550') {
+          $this->miles = $miles_to_use;
+        }
     }
 
     function __construct($car_type, $cost, $miles_gone) {
@@ -21,24 +33,13 @@ class Car
 }
 
 $porsche = new Car('2014 Porshe 911', 114000, 7888);
-// $porsche->make_model = '2014 Porshe 911';
-// $porsche->price = 114000;
-// $porsche->miles = 7888;
 
 $ford = new Car("2011 Ford F450",55996,14241);
-// $ford->make_model = "2011 Ford F450";
-// $ford->price = 55995;
-// $ford->miles = 14241;
 
 $lexus = new Car("2013 Lexus RX 350", 44700, 20000);
-// $lexus->make_model = "2013 Lexus RX 350";
-// $lexus->price = 44700;
-// $lexus->miles = 20000;
 
 $mercedes = new Car("Mercedes Benz CLS550", 39900, 37979);
-// $mercedes->make_model = "Mercedes Benz CLS550";
-// $mercedes->price = 39900;
-// $mercedes->miles = 37979;
+$mercedes->setMiles(38000);
 
 $cars = array($porsche, $ford, $lexus, $mercedes);
 $max_price = $_GET['price'];
@@ -62,10 +63,11 @@ foreach ($cars as $car) {
     <ul>
       <?php
         foreach ($cars_matching_search as $car) {
+          $mileage = $car->getMiles();
           echo "<li> $car->make_model </li>";
           echo "<ul>";
             echo "<li> $car->price </li>";
-            echo "<li> Miles: $car->miles </li>";
+            echo "<li> Miles: $mileage </li>";
           echo "</ul>";
         }
       ?>
